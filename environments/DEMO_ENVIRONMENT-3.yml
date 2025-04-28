@@ -1,0 +1,14 @@
+fileVersion: 1
+id: "3"
+mappingDefinitions:
+  SOURCE:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCDS_SF100TCL
+  TARGET:
+    database: COALESCE_DB
+    schema: SALES
+  UTILITIES:
+    database: UTIL_DB
+    schema: PUBLIC
+name: DEMO_ENVIRONMENT
+type: Environment
