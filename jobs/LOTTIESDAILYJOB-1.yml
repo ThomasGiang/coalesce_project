@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "1"
+includeSelector: ODS_LOTTIES_STOCK
+name: LOTTIES DAILY JOB
+type: Job
