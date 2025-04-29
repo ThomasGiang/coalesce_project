@@ -1,10 +1,10 @@
 fileVersion: 1
-id: 1e402137-ae4f-40f0-8835-fab326767041
-name: CUSTOMER_DEMOGRAPHICS
+id: e5001816-63c8-49b6-b182-64a821d92240
+name: SUPPLIER
 operation:
   database: ""
   deployEnabled: true
-  description: ""
+  description: Supplier data as defined by TPC-H
   locationName: SOURCE
   metadata:
     columns:
@@ -13,33 +13,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 51fddebd-ab3a-4a1b-8be5-7eec7ff1ed89
-          stepCounter: 1e402137-ae4f-40f0-8835-fab326767041
+          columnCounter: ff0ad7a5-4611-4260-8355-c50d384d6ce6
+          stepCounter: e5001816-63c8-49b6-b182-64a821d92240
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: CD_DEMO_SK
+        name: S_SUPPKEY
         nullable: false
-        primaryKey: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 6a713d06-bccf-4156-bca1-7bb853ca96e3
-          stepCounter: 1e402137-ae4f-40f0-8835-fab326767041
-        config: {}
-        dataType: VARCHAR(1)
-        defaultValue: ""
-        description: ""
-        name: CD_GENDER
-        nullable: true
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -51,14 +32,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: c8615ff0-e714-414b-9c7e-94e21ade8a91
-          stepCounter: 1e402137-ae4f-40f0-8835-fab326767041
+          columnCounter: cf2f242d-b95f-4370-93fb-bd2147b43110
+          stepCounter: e5001816-63c8-49b6-b182-64a821d92240
         config: {}
-        dataType: VARCHAR(1)
+        dataType: VARCHAR(25)
         defaultValue: ""
         description: ""
-        name: CD_MARITAL_STATUS
-        nullable: true
+        name: S_NAME
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -70,14 +51,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 46092515-dd96-4305-85d5-ae39c05f1c19
-          stepCounter: 1e402137-ae4f-40f0-8835-fab326767041
+          columnCounter: 42334772-a11c-473e-86db-adf42859dfd4
+          stepCounter: e5001816-63c8-49b6-b182-64a821d92240
         config: {}
-        dataType: VARCHAR(20)
+        dataType: VARCHAR(40)
         defaultValue: ""
         description: ""
-        name: CD_EDUCATION_STATUS
-        nullable: true
+        name: S_ADDRESS
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -89,14 +70,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 78bb04ef-b795-435e-955c-96e02e045f1e
-          stepCounter: 1e402137-ae4f-40f0-8835-fab326767041
+          columnCounter: 70a50b1e-1a6b-4dae-aaae-fdfc03923e6b
+          stepCounter: e5001816-63c8-49b6-b182-64a821d92240
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: CD_PURCHASE_ESTIMATE
-        nullable: true
+        name: S_NATIONKEY
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -108,14 +89,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: dc40f8ad-4d16-4a68-b161-0c4e6e4558f0
-          stepCounter: 1e402137-ae4f-40f0-8835-fab326767041
+          columnCounter: 126cd642-a2b1-4b38-95c5-a5b6f72beb62
+          stepCounter: e5001816-63c8-49b6-b182-64a821d92240
         config: {}
-        dataType: VARCHAR(10)
+        dataType: VARCHAR(15)
         defaultValue: ""
         description: ""
-        name: CD_CREDIT_RATING
-        nullable: true
+        name: S_PHONE
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -127,14 +108,14 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 622c65f9-00a0-4eeb-8505-5bb9ce34e656
-          stepCounter: 1e402137-ae4f-40f0-8835-fab326767041
+          columnCounter: 3a07cb49-b015-42e3-b90a-86c0bcbf61d0
+          stepCounter: e5001816-63c8-49b6-b182-64a821d92240
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: NUMBER(12,2)
         defaultValue: ""
         description: ""
-        name: CD_DEP_COUNT
-        nullable: true
+        name: S_ACCTBAL
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -146,13 +127,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 663c97a5-3675-48e5-ac0a-e87f40dc858f
-          stepCounter: 1e402137-ae4f-40f0-8835-fab326767041
+          columnCounter: 9cab54c6-7ea1-4157-b23a-ddbdd9231df2
+          stepCounter: e5001816-63c8-49b6-b182-64a821d92240
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: VARCHAR(101)
         defaultValue: ""
         description: ""
-        name: CD_DEP_EMPLOYED_COUNT
+        name: S_COMMENT
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -160,26 +141,7 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 8ee9fc1a-a6d3-4db8-8db1-a7baf67564a8
-          stepCounter: 1e402137-ae4f-40f0-8835-fab326767041
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: CD_DEP_COLLEGE_COUNT
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-  name: CUSTOMER_DEMOGRAPHICS
+  name: SUPPLIER
   schema: ""
   sqlType: Source
   type: sourceInput

@@ -1,0 +1,149 @@
+fileVersion: 1
+id: 5eb40bf9-6bc7-4501-a0a4-76e915bd04e1
+name: FCT_ORDERS
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b6e08f9-2f7e-437a-a929-1f3aa26eb2a4
+          stepCounter: 5eb40bf9-6bc7-4501-a0a4-76e915bd04e1
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: F_ORDERKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: be6be98b-a624-40e3-8f11-cef331a2f1c5
+                stepCounter: 53c4457e-c6c9-478d-8f17-d49b762f55c5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1194a5e-498c-48ea-893f-4e059ef936b4
+          stepCounter: 5eb40bf9-6bc7-4501-a0a4-76e915bd04e1
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: DIM_CUSTOMER_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 806220a0-5ce4-4912-97b0-8b491541b351
+                stepCounter: 53c4457e-c6c9-478d-8f17-d49b762f55c5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 663513a5-d253-4b30-9342-902abf1de7b3
+          stepCounter: 5eb40bf9-6bc7-4501-a0a4-76e915bd04e1
+        config: {}
+        dataType: VARCHAR(1)
+        description: ""
+        name: F_ORDERSTATUS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ca055d8c-cd59-4554-9e2c-0eee03116456
+                stepCounter: 53c4457e-c6c9-478d-8f17-d49b762f55c5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aeec46be-faff-45ff-8c33-48d8fef2802a
+          stepCounter: 5eb40bf9-6bc7-4501-a0a4-76e915bd04e1
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: F_SHIPPRIORITY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 72378dfc-c0dc-49c8-a1f6-34c93eca6e99
+                stepCounter: 53c4457e-c6c9-478d-8f17-d49b762f55c5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ddfc3eb0-c861-4305-9f39-bafd00afaf3a
+          stepCounter: 5eb40bf9-6bc7-4501-a0a4-76e915bd04e1
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        name: F_TOTALPRICE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d3baec89-ef2f-4308-bc15-c3185b55ea3f
+                stepCounter: 53c4457e-c6c9-478d-8f17-d49b762f55c5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2d202e2-43ff-434e-a026-bbef8651f0cb
+          stepCounter: 5eb40bf9-6bc7-4501-a0a4-76e915bd04e1
+        config: {}
+        dataType: DATE
+        description: ""
+        name: F_ORDERDATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 562b52de-8c6d-4a39-ba0a-cab8f0e6b3cd
+                stepCounter: 53c4457e-c6c9-478d-8f17-d49b762f55c5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 403ff01f-a915-4f5c-a5d1-67ce6e19df8e
+          stepCounter: 5eb40bf9-6bc7-4501-a0a4-76e915bd04e1
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: F_ORDERPRIORITY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 61b4d401-91ba-4e21-bb1b-e2467a9a2c5a
+                stepCounter: 53c4457e-c6c9-478d-8f17-d49b762f55c5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4b9ce6f-7b35-4b2c-a201-bd44d2ef6088
+          stepCounter: 5eb40bf9-6bc7-4501-a0a4-76e915bd04e1
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: F_CLERK
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: afb9a9bf-e5c9-4ce1-b61f-85d83d05fd8b
+                stepCounter: 53c4457e-c6c9-478d-8f17-d49b762f55c5
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: STG_ORDERS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'STG_ORDERS') }} "STG_ORDERS"
+        name: FCT_ORDERS
+        noLinkRefs: []
+  name: FCT_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

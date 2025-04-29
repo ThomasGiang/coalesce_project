@@ -1,10 +1,10 @@
 fileVersion: 1
-id: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-name: CUSTOMER_ADDRESS
+id: f67261a6-82bd-41f2-911d-74a8b3006e72
+name: LINEITEM
 operation:
   database: ""
   deployEnabled: true
-  description: ""
+  description: Lineitem data as defined by TPC-H
   locationName: SOURCE
   metadata:
     columns:
@@ -13,32 +13,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e5a4a1a6-336f-4c16-923b-90e1e90d1109
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
+          columnCounter: 5e4b91ed-b310-4b8c-8b24-d31716e48313
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: CA_ADDRESS_SK
-        nullable: false
-        primaryKey: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: d94803e5-e38d-4d31-a192-ffa707af4b74
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: VARCHAR(16)
-        defaultValue: ""
-        description: ""
-        name: CA_ADDRESS_ID
+        name: L_ORDERKEY
         nullable: false
         primaryKey: false
         sourceColumnReferences:
@@ -51,14 +32,261 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 1c99738f-fa78-4933-b251-d2a571bd5d71
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
+          columnCounter: 520b567c-f817-49c4-af25-e28574a92c37
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: L_PARTKEY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d4759a1-45d6-4347-b1dc-32084bdc5404
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: L_SUPPKEY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbdbc232-d9ce-4b19-a544-991370058716
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: L_LINENUMBER
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7d8dde2-e0cd-49b9-907f-d4e1b22aa5e0
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: ""
+        name: L_QUANTITY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 273ca00d-328e-4ca7-92d3-2c5343ce3897
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: ""
+        name: L_EXTENDEDPRICE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ca9d575-32c0-46b5-9a7b-9ca59a8fb7a9
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: ""
+        name: L_DISCOUNT
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99e52344-17a5-4251-a2d4-332af359b366
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: ""
+        name: L_TAX
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01998232-1380-4260-96aa-fe38a98d3ff6
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: VARCHAR(1)
+        defaultValue: ""
+        description: ""
+        name: L_RETURNFLAG
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95f61f13-e5b1-4b29-9cb5-24e0cff03870
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: VARCHAR(1)
+        defaultValue: ""
+        description: ""
+        name: L_LINESTATUS
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ddc835c-3038-4942-8426-74c3d84f2dd3
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: L_SHIPDATE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79865721-f60d-457f-8059-4c98be9975be
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: L_COMMITDATE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 59b23384-7892-45dc-aae0-c18d9a8cc501
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: L_RECEIPTDATE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63d2be7c-511d-4fb3-8f51-df33b620c3af
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
+        config: {}
+        dataType: VARCHAR(25)
+        defaultValue: ""
+        description: ""
+        name: L_SHIPINSTRUCT
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0876d7a3-8ea2-45db-be16-789594f3d8b8
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
         config: {}
         dataType: VARCHAR(10)
         defaultValue: ""
         description: ""
-        name: CA_STREET_NUMBER
-        nullable: true
+        name: L_SHIPMODE
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
@@ -70,192 +298,21 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 63abac9e-2977-4c17-96bc-513ec896444c
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
+          columnCounter: bfe17951-3198-4dc4-83ea-7d00195bd184
+          stepCounter: f67261a6-82bd-41f2-911d-74a8b3006e72
         config: {}
-        dataType: VARCHAR(60)
+        dataType: VARCHAR(44)
         defaultValue: ""
         description: ""
-        name: CA_STREET_NAME
-        nullable: true
+        name: L_COMMENT
+        nullable: false
         primaryKey: false
         sourceColumnReferences:
           - columnReferences: []
             transform: ""
         transform: ""
         uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3403e3ec-feac-4ada-9243-b17c31ff7654
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: VARCHAR(15)
-        defaultValue: ""
-        description: ""
-        name: CA_STREET_TYPE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 720e0418-80f0-4269-8130-0f4c2bc08439
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: VARCHAR(10)
-        defaultValue: ""
-        description: ""
-        name: CA_SUITE_NUMBER
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: d9024a5f-7349-4456-bfd6-3445a47fc814
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: VARCHAR(60)
-        defaultValue: ""
-        description: ""
-        name: CA_CITY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3f1cfd43-e110-4fab-bb00-9052ae7a5a60
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: VARCHAR(30)
-        defaultValue: ""
-        description: ""
-        name: CA_COUNTY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 4f27cf86-eb47-45ed-b954-66f957bbe065
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: VARCHAR(2)
-        defaultValue: ""
-        description: ""
-        name: CA_STATE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 07f9536f-48f1-4e56-aa4a-50796423c066
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: VARCHAR(10)
-        defaultValue: ""
-        description: ""
-        name: CA_ZIP
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: a03720d6-91d5-43bf-9ed1-6f8cd569f59f
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: VARCHAR(20)
-        defaultValue: ""
-        description: ""
-        name: CA_COUNTRY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: ec9b3f78-54c0-4b3d-b842-2873ac94da99
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: NUMBER(5,2)
-        defaultValue: ""
-        description: ""
-        name: CA_GMT_OFFSET
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: dc305f0b-5ee2-4fef-99a9-e93be23ed608
-          stepCounter: 23319b8e-9878-46cf-a5b6-6d32828a1fe6
-        config: {}
-        dataType: VARCHAR(20)
-        defaultValue: ""
-        description: ""
-        name: CA_LOCATION_TYPE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-  name: CUSTOMER_ADDRESS
+  name: LINEITEM
   schema: ""
   sqlType: Source
   type: sourceInput
