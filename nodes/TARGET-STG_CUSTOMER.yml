@@ -15,9 +15,22 @@ operation:
   locationName: TARGET
   materializationType: table
   metadata:
-    appliedNodeTests: []
+    appliedNodeTests:
+      - continueOnFailure: true
+        description: ""
+        name: Test
+        runOrder: After
+        templateString: |-
+          SELECT 
+              * 
+          FROM 
+              {{ ref('SOURCE','CUSTOMER')}} 
+          WHERE 
+              C_NATIONKEY < 0
     columns:
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: true
+          isDistinct: true
         columnReference:
           columnCounter: ad2c2fef-946e-42c9-81b5-a18b831102d9
           stepCounter: bf833bbe-116f-42d0-ad04-628fd69c3491
@@ -31,7 +44,9 @@ operation:
               - columnCounter: e09cbf60-bec4-4cc2-8f70-c5bfec1ee867
                 stepCounter: 25b5653a-0f4a-4c1f-8a31-a32e9a8fe752
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: c358ff51-404a-4791-901f-7506a198b70c
           stepCounter: bf833bbe-116f-42d0-ad04-628fd69c3491
@@ -45,7 +60,9 @@ operation:
               - columnCounter: 4af11ba9-a843-4ff8-b78c-ba5e84f364d1
                 stepCounter: 25b5653a-0f4a-4c1f-8a31-a32e9a8fe752
             transform: UPPER(CUSTOMER."C_NAME")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: c333fec0-155e-419b-92ee-7f7328ba8392
           stepCounter: bf833bbe-116f-42d0-ad04-628fd69c3491
@@ -59,7 +76,9 @@ operation:
               - columnCounter: 71d7e3a8-2852-46bf-b428-e5c61b97984d
                 stepCounter: 25b5653a-0f4a-4c1f-8a31-a32e9a8fe752
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: cb700985-7580-4302-94e6-2a1e5e28237b
           stepCounter: bf833bbe-116f-42d0-ad04-628fd69c3491
@@ -73,7 +92,9 @@ operation:
               - columnCounter: fe641cf2-3f45-48fa-91b3-121d99dc242c
                 stepCounter: 25b5653a-0f4a-4c1f-8a31-a32e9a8fe752
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: true
+          isDistinct: false
         columnReference:
           columnCounter: 6d68583b-d4bb-462c-8e45-fa7757d2779f
           stepCounter: bf833bbe-116f-42d0-ad04-628fd69c3491
@@ -87,7 +108,9 @@ operation:
               - columnCounter: 0584b08b-0491-4ce7-9b07-5a5ab66d82eb
                 stepCounter: 25b5653a-0f4a-4c1f-8a31-a32e9a8fe752
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 3e7f392d-ba75-4699-b5bf-1a8c1081721e
           stepCounter: bf833bbe-116f-42d0-ad04-628fd69c3491
@@ -101,7 +124,9 @@ operation:
               - columnCounter: cb59dab3-9e03-46dd-aac8-9adc6434b3d4
                 stepCounter: 25b5653a-0f4a-4c1f-8a31-a32e9a8fe752
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 1217afe0-d159-4ae6-9e0c-a4e8034e9e20
           stepCounter: bf833bbe-116f-42d0-ad04-628fd69c3491
@@ -115,7 +140,9 @@ operation:
               - columnCounter: 385cd877-5c4f-472a-ba53-3c7a4f308915
                 stepCounter: 25b5653a-0f4a-4c1f-8a31-a32e9a8fe752
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: aab22ae1-b2d3-47aa-920b-51ae1da7d2b7
           stepCounter: bf833bbe-116f-42d0-ad04-628fd69c3491
@@ -130,7 +157,9 @@ operation:
                 stepCounter: 25b5653a-0f4a-4c1f-8a31-a32e9a8fe752
             transform: ""
     cteString: ""
-    enabledColumnTestIDs: []
+    enabledColumnTestIDs:
+      - hasNull
+      - isDistinct
     sourceMapping:
       - aliases: {}
         customSQL:
