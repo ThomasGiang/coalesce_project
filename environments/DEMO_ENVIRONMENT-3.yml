@@ -4,6 +4,9 @@ mappingDefinitions:
   SOURCE:
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCDS_SF100TCL
+  SOURCE_DUMMY:
+    database: COALESCE_DB
+    schema: DUMMY
   TARGET:
     database: COALESCE_DB
     schema: SALES
